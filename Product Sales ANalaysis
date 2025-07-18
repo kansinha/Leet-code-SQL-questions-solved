@@ -1,0 +1,26 @@
+Write a solution to report the product_name, year, and price for each sale_id in the Sales table.
+Table: Sales
++-------------+-------+
+| Column Name | Type  |
++-------------+-------+
+| sale_id     | int   |
+| product_id  | int   |
+| year        | int   |
+| quantity    | int   |
+| price       | int   |
++-------------+-------+
+
+Table: Product
+
++--------------+---------+
+| Column Name  | Type    |
++--------------+---------+
+| product_id   | int     |
+| product_name | varchar |
++--------------+---------+
+
+solution:
+select product_name, year, price 
+from product p
+join sales s on
+s.product_id = p.product_id
